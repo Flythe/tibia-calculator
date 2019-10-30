@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <script type="text/javascript" src="food.js"></script>
+        <script type="text/javascript" src="rune.js"></script>
+        <script type="text/javascript" src="character.js"></script>
+        <script type="text/javascript" src="magic_level.js"></script>
+        <script type="text/javascript" src="experience_level.js"></script>
+        <script type="text/javascript" src="form.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="content">
+            <h1>Simple Calculator</h1>
+
+            <form onchange="formHandler.recalc()">
+                <label for="vocation">Vocation</label>
+                <select name="vocation">
+                    <option value="mage">Mage</option>
+                    <option value="knight">Knight</option>
+                    <option value="paladin">Paladin</option>
+                </select>
+
+                <div class="row">
+                    <div class="col-6">
+                        <label class="container" name="promotion">Promoted
+                            <input type="checkbox" name="promotion">
+                            <span class="checkmark"></span>
+                        </label>
+                
+                        <label for="magicLevel">From Magic Level</label>
+                        <input type="number" name="magicLevel" value="1"/>
+
+                        <label for="experienceLevel">From Level</label>
+                        <input type="number" name="experienceLevel" value="1"/>
+                    </div>
+                    <div class="col-6">
+                        <label class="container" name="dailyRewards">Daily rewards double speed
+                            <input type="checkbox" name="dailyRewards">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label for="toMagicLevel">To Magic Level</label>
+                        <input type="number" name="toMagicLevel" value="2"/>
+
+                        <label for="toExperienceLevel">To Level</label>
+                        <input type="number" name="toExperienceLevel" value="2"/>
+                    </div>
+                </div>
+            </form>
+
+            <hr/>
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="manaToLevel">Mana to magic level</label>
+                    <input type="text" disabled="disabled" name="manaToLevel"/>
+
+                    <label for="manaPerHour">Mana per hour</label>
+                    <input type="text" disabled="disabled" name="manaPerHour"/>
+
+                    <label for="timeToMagicLevel">Time to next magic level</label>
+                    <input type="text" disabled="disabled" name="timeToMagicLevel"/>
+
+                    <label for="foodToMagicLevel">Number of hams</label>
+                    <input type="text" disabled="disabled" name="foodToMagicLevel"/>
+
+                    <label for="runesToMagicLevel">Number of blank runes</label>
+                    <input type="text" disabled="disabled" name="runesToMagicLevel"/>
+                </div>
+                <div class="col-6">
+                    <label for="experienceToLevel">Experience to level</label>
+                    <input type="text" disabled="disabled" name="experienceToLevel"/>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            let formHandler = new Form();
+        </script>
+    </body>
+</html>
